@@ -48,8 +48,8 @@ window.onload=function(){
 // });
 $("#additionbutton").click(function(){
     //var mydata = [1,2];
-    var aField = parseInt($("#a").val());
-    var bField = parseInt($("#b").val());
+    var aField = parseInt($("#aField").val());
+    var bField = parseInt($("#bField").val());
 
     //call R function: stats::sd(x=data)
     var req = ocpu.rpc("addition",{
