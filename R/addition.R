@@ -1,3 +1,3 @@
 addition <- function(a, b) {
-   a + b
+   return(a + b)
 }
