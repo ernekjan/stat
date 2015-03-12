@@ -53,8 +53,8 @@ $("#additionbutton").click(function(){
 
     //call R function: stats::sd(x=data)
     var req = ocpu.rpc("addition",{
-        aField,
-        bField
+        a: aField,
+        b: bField
     }, function(output){
         $("#output").text("Addition is:" + output);
     });
