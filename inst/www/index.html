@@ -48,11 +48,13 @@ window.onload=function(){
 // });
 $("#additionbutton").click(function(){
     //var mydata = [1,2];
-    
+    var aField = parseInt($("#a").val());
+    var bField = parseInt($("#b").val());
+
     //call R function: stats::sd(x=data)
     var req = ocpu.rpc("addition",{
-        a : 1,
-        b : 2
+        a : aField,
+        b : bField
     }, function(output){
         $("#output").text("Addition is:" + output);
     });
@@ -74,15 +76,14 @@ $("#additionbutton").click(function(){
 <body>
 
 <h1>Simple package</h1>
+<p>Zadej čísla pro základní numerické operace</p>
+<input type="number" id="aField" value="1">
+<input type="number" id="bField" value="1">
 
-<!--<b>n (count) </b> <input type="number" id="nfield" value="1000">
 
-<b>distribution type</b> <select id="distfield">
-<option>normal</option>
-<option>uniform</option>
-</select> <br>
--->
 <button id="additionbutton" type="button">+</button> <br>
+<button id="subtractionbutton" type="button">+</button> <br>
+<button id="multiplicationbutton" type="button">+</button> <br>
 
 <div id="output"></div>    
 
