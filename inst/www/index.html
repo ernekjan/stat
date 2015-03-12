@@ -60,6 +60,34 @@ $("#additionbutton").click(function(){
     });
 });
 
+$("#subtractionbutton").click(function(){
+    //var mydata = [1,2];
+    var aField = parseInt($("#aField").val());
+    var bField = parseInt($("#bField").val());
+
+    //call R function: stats::sd(x=data)
+    var req = ocpu.rpc("addition",{
+        "a": aField,
+        "b": bField
+    }, function(output){
+        $("#output").text("Subtraction is:" + output);
+    });
+});
+
+$("#multiplicationbutton").click(function(){
+    //var mydata = [1,2];
+    var aField = parseInt($("#aField").val());
+    var bField = parseInt($("#bField").val());
+
+    //call R function: stats::sd(x=data)
+    var req = ocpu.rpc("addition",{
+        "a": aField,
+        "b": bField
+    }, function(output){
+        $("#output").text("Multiplication is:" + output);
+    });
+});
+
 }//]]>  
 
 </script>
@@ -82,8 +110,8 @@ $("#additionbutton").click(function(){
 
 
 <button id="additionbutton" type="button">+</button> <br>
-<button id="subtractionbutton" type="button">+</button> <br>
-<button id="multiplicationbutton" type="button">+</button> <br>
+<button id="subtractionbutton" type="button">-</button> <br>
+<button id="multiplicationbutton" type="button">*</button> <br>
 
 <div id="output"></div>    
 
