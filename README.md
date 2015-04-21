@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # stat
 My first OpenCPU application.
 =======
