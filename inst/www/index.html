@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<<<<<<< HEAD
 <title>Simple package</title>
+=======
+<title>Simple package in R</title>
+>>>>>>> 178eeb7e2b02237e58d350343221a43fa33f9512
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -10,20 +14,32 @@
 <script src="opencpu/jquery-1.10.2.min.js"> </script>
 <script src="opencpu/opencpu-0.4.js"> </script>
 
+<<<<<<< HEAD
+=======
+<!-- OpenCPU client library -->
+<!--<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="//cdn.opencpu.org/opencpu-0.4.js"></script>-->
+
+>>>>>>> 178eeb7e2b02237e58d350343221a43fa33f9512
 <!-- Include order: first jquery, then opencpu.js, and then your code 
     <script src="jquery-2.1.1.js"></script>
     <script src="opencpu-0.5.js"></script>-->
 
+<<<<<<< HEAD
 <!-- some optional styling stuff -->
 <!--<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
 <link href="jqueryui/css/ui-lightness/jquery-ui-1.10.3.custom.css" rel="stylesheet" media="screen">
 
 <script src="bootstrap/js/bootstrap.js"> </script>
 <script src="jqueryui/jquery-ui-1.10.3.custom.js"> </script>-->
+=======
+
+>>>>>>> 178eeb7e2b02237e58d350343221a43fa33f9512
 
 
 
 <script> 
+<<<<<<< HEAD
 //<![CDATA[ 
 window.onload=function(){
 //set CORS to call "appdemo" package on public server
@@ -49,11 +65,24 @@ $("submitbutton").click(function(){
     var req = ocpu.rpc("addition",{
         a : 1,
         b : 2
+=======
+window.onload=function(){
+
+$("#additionbutton").click(function(){
+    
+    var aField = parseInt($("#aField").val());
+    var bField = parseInt($("#bField").val());
+
+    var req = ocpu.rpc("addition",{
+        "a": aField,
+        "b": bField
+>>>>>>> 178eeb7e2b02237e58d350343221a43fa33f9512
     }, function(output){
         $("#output").text("Addition is:" + output);
     });
 });
 
+<<<<<<< HEAD
 }//]]>  
 
 </script>
@@ -66,10 +95,49 @@ $("submitbutton").click(function(){
   border-radius: 4px;
 }
 </style>-->
+=======
+$("#subtractionbutton").click(function(){
+
+    var aField = parseInt($("#aField").val());
+    var bField = parseInt($("#bField").val());
+
+    var req = ocpu.rpc("subtraction",{
+        "a": aField,
+        "b": bField
+    }, function(output){
+        $("#output").text("Subtraction is:" + output);
+    });
+});
+
+$("#multiplicationbutton").click(function(){
+
+    var aField = parseInt($("#aField").val());
+    var bField = parseInt($("#bField").val());
+
+    var req = ocpu.rpc("multiplication",{
+        "a": aField,
+        "b": bField
+    }, function(output){
+        $("#output").text("Multiplication is:" + output);
+    });
+});
+}
+
+</script>
+
+<style>
+#output {
+  width: 50%;
+  height: 50px;
+  color: #000000;
+}
+</style>
+>>>>>>> 178eeb7e2b02237e58d350343221a43fa33f9512
 </head>
 
 <body>
 
+<<<<<<< HEAD
 <h1>Simple package</h1>
 
 <!--<b>n (count) </b> <input type="number" id="nfield" value="1000">
@@ -88,5 +156,22 @@ $("submitbutton").click(function(){
 <!-- some text, not part of the app -->
 <p>This is a demo of the <code>rplot</code> function in the <a href="http://public.opencpu.org/jslib.html">opencpu.js</a> library. It calls the R function <a href="http://public.opencpu.org/ocpu/library/appdemo/R/randomplot">randomplot</a> in the R package <a href="http://public.opencpu.org/ocpu/library/appdemo/R/">appdemo</a>.</p>
 
+=======
+<h1>Simple package in R</h1>
+<p>Enter some numbers:</p>
+<input type="number" id="aField" value="1">
+<input type="number" id="bField" value="1">
+
+<table>
+<tr>
+<td><button id="additionbutton" type="button">+</button></td>
+<td><button id="subtractionbutton" type="button">-</button> </td>
+<td><button id="multiplicationbutton" type="button">*</button> </td>
+</tr>
+</table>
+<div id="output"></div>    
+
+
+>>>>>>> 178eeb7e2b02237e58d350343221a43fa33f9512
 </body>
 </html>

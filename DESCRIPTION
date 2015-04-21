@@ -3,7 +3,11 @@ Type: Package
 Title: OpenCPU First App
 Version: 0.01
 Date: 2015-03-11
+<<<<<<< HEAD
 Author: Jana Ernekerová 
+=======
+Author: Jana Ernekerova
+>>>>>>> 178eeb7e2b02237e58d350343221a43fa33f9512
 Maintainer: Jana <ernekjan@fit.cvut.cz>
 Description: This package is my first try to make an OpenCPU App. 
 License: Apache2

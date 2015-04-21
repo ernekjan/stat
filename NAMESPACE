@@ -1,4 +1,7 @@
 export(addition)
 export(subtraction)
 export(multiplication)
+<<<<<<< HEAD
 export(division)
+=======
+>>>>>>> 178eeb7e2b02237e58d350343221a43fa33f9512
