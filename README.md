@@ -1,5 +1,5 @@
 <<<<<<< HEAD
-# appStat
+# stat
 My first OpenCPU application.
 =======
 # stat
